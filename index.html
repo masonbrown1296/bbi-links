@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bio Behavioral Institute: links</title>
+<meta name="description" content="Links from Bio Behavioral Institute's recent posts. OCD, BDD, and anxiety treatment in Great Neck, New York.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://cdn.prod.website-files.com/68f14db122ebed86fcb0f3bb/690515bbcde3be38185afaee_Bio-Behavioral-Institute-Web-Clip.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+  :root { --pine:#0e4144; --mint:#bbf6e7; --wash:#eefdf9; --ink:#4a7173; --paper:#ffffff; }
+  * { box-sizing:border-box; }
+  html { background:var(--wash); }
+  body { margin:0; font-family:'Instrument Sans',Arial,sans-serif; color:var(--pine); background:var(--wash); -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:520px; margin:0 auto; padding:28px 16px 48px; }
+  header { display:flex; flex-direction:column; align-items:flex-start; gap:18px; padding:4px 4px 22px; }
+  header img { height:44px; width:auto; }
+  header h1 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:30px; line-height:1.12; letter-spacing:-.01em; margin:0; }
+  header p { margin:0; font-size:15px; line-height:1.5; color:var(--ink); }
+  h2 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:21px; margin:28px 4px 12px; }
+  ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  a.link { display:flex; align-items:center; justify-content:space-between; gap:14px; background:var(--paper); color:var(--pine); text-decoration:none; border-radius:16px; padding:16px 18px; box-shadow:0 2px 10px rgba(14,65,68,.06); border:1px solid rgba(14,65,68,.06); }
+  a.link:active { background:#f6fffd; }
+  a.link .t { font-family:'Instrument Serif',Georgia,serif; font-size:20px; line-height:1.2; }
+  a.link .n { display:block; font-size:13.5px; line-height:1.45; color:var(--ink); margin-top:5px; }
+  a.link .c { flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; }
+  a.link .c svg { width:14px; height:14px; }
+  a.pin { background:var(--pine); color:#fff; border-color:transparent; }
+  a.pin .n { color:rgba(255,255,255,.72); }
+  footer { margin-top:36px; padding:0 4px; font-size:13px; line-height:1.6; color:var(--ink); }
+  footer a { color:var(--pine); text-decoration:none; border-bottom:2px solid var(--mint); }
+  .empty { font-size:15px; color:var(--ink); padding:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="https://www.biobehavioralinstitute.com/?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"><img src="https://cdn.prod.website-files.com/68f14db122ebed86fcb0f3bb/68f5461f40607d568e3ada5c_Frame%201597881205.svg" alt="Bio Behavioral Institute"></a>
+    <h1>Links from our recent posts</h1>
+    <p>Bio Behavioral Institute treats OCD, body dysmorphic disorder, and anxiety in Great Neck, New York. 45 years, more than 4,000 people with OCD.</p>
+  </header>
+
+  <section>
+    <h2>From the feed</h2>
+    <ul id="timed"><li class="empty">Loading…</li></ul>
+  </section>
+
+  <section>
+    <h2>Always here</h2>
+    <ul id="pinned"></ul>
+  </section>
+
+  <footer>
+    1010 Northern Blvd, Suite 416, Great Neck, NY 11021<br>
+    <a href="tel:5164877116">516-487-7116</a> · <a href="https://www.biobehavioralinstitute.com/?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio">biobehavioralinstitute.com</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var MAX_TIMED = 8;
+  var chevron = '<span class="c" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="#0e4144" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></span>';
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function item(x, pinned) {
+    var note = x.note ? '<span class="n">' + esc(x.note) + '</span>' : '';
+    return '<li><a class="link' + (pinned ? ' pin' : '') + '" href="' + esc(x.url) + '"' + (x.external ? ' rel="noopener"' : '') + '><span><span class="t">' + esc(x.label) + '</span>' + note + '</span>' + chevron + '</a></li>';
+  }
+  function render(data) {
+    var now = Date.now();
+    var timed = (data.timed || []).filter(function (x) {
+      var from = Date.parse(x.from), until = x.until ? Date.parse(x.until) : Infinity;
+      return !isNaN(from) && from <= now && now < until;
+    }).sort(function (a, b) { return Date.parse(b.from) - Date.parse(a.from); }).slice(0, MAX_TIMED);
+    var t = document.getElementById('timed');
+    t.innerHTML = timed.length ? timed.map(function (x) { return item(x, false); }).join('') : '<li class="empty">New links land here as posts go live.</li>';
+    document.getElementById('pinned').innerHTML = (data.pinned || []).map(function (x) { return item(x, true); }).join('');
+  }
+  fetch('links.json?v=' + Math.floor(now() / 600000), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(render).catch(function () {
+    document.getElementById('timed').innerHTML = '<li class="empty">Links are at <a href="https://www.biobehavioralinstitute.com/blog">biobehavioralinstitute.com/blog</a>.</li>';
+  });
+  function now() { return Date.now(); }
+})();
+</script>
+</body>
+</html>

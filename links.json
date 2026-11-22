@@ -1,0 +1,85 @@
+{
+  "_notes": "Instagram link-in-bio for Bio Behavioral Institute. 'timed' entries show once 'from' has passed (ISO 8601 with offset, Eastern) and hide at 'until' if set; newest first, eight at most. 'pinned' entries always show. BBI links carry the link_in_bio UTM; external links do not. Edit, commit, push; GitHub Pages redeploys in about a minute.",
+  "timed": [
+    {
+      "from": "2026-11-13T12:00:00-05:00",
+      "label": "The autism and OCD program",
+      "note": "For kids whose exposure therapy did not stick. Dr. Neziroglu's Friday videos are about this.",
+      "url": "https://www.biobehavioralinstitute.com/programs/autism-ocd?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-11-18T12:00:00-05:00",
+      "label": "Watch: body image after breast cancer surgery",
+      "note": "Dr. Neziroglu's Psychiatry Advisor round table, Part 1.",
+      "url": "https://www.psychiatryadvisor.com/features/body-image-issues-after-breast-cancer-expert-clinician-forum/",
+      "external": true
+    },
+    {
+      "from": "2026-11-24T12:00:00-05:00",
+      "label": "Read: when OCD and BDD make the holidays harder",
+      "note": "Food, mirrors, family gatherings, and what helps.",
+      "url": "https://www.biobehavioralinstitute.com/blog/being-okay-with-yourself-and-your-body-during-the-holiday-season?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-11-25T12:00:00-05:00",
+      "label": "The Bergen Four-Day Treatment for OCD",
+      "note": "Four straight days of exposure therapy. Names for the next group: 516-487-7116.",
+      "url": "https://www.biobehavioralinstitute.com/programs/bergen-4-day-treatment?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-12-01T12:00:00-05:00",
+      "label": "Read: ketamine for OCD, what the 2026 evidence says",
+      "note": "Reviewed by Dr. Fugen Neziroglu.",
+      "url": "https://www.biobehavioralinstitute.com/blog/ketamine-for-ocd-what-the-2026-evidence-actually-says?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-12-10T12:00:00-05:00",
+      "label": "Read: IOP for OCD, what it actually means",
+      "note": "The same exposure therapy, 10 to 25 hours a week.",
+      "url": "https://www.biobehavioralinstitute.com/blog/iop-for-ocd-what-it-actually-means?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-12-16T12:00:00-05:00",
+      "label": "Read: how long does OCD treatment take?",
+      "note": "The four things it depends on.",
+      "url": "https://www.biobehavioralinstitute.com/blog/how-long-does-ocd-treatment-take-what-determines-your-timeline?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2026-12-29T12:00:00-05:00",
+      "label": "Read: how to make your resolutions stick",
+      "url": "https://www.biobehavioralinstitute.com/blog/new-year-new-me-how-to-make-your-resolutions-stick?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2027-01-05T12:00:00-05:00",
+      "label": "Read: handling setbacks without losing hope",
+      "note": "Relapse prevention in OCD and anxiety recovery.",
+      "url": "https://www.biobehavioralinstitute.com/blog/how-to-handle-setbacks-ocd-anxiety-recovery?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "from": "2027-01-07T12:00:00-05:00",
+      "label": "Read: how to tell an OCD specialist from a generalist",
+      "note": "Questions to ask before you book.",
+      "url": "https://www.biobehavioralinstitute.com/blog/ocd-treatment-on-long-island-how-to-tell-a-specialist-from-a-generalist-before-you-book?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    }
+  ],
+  "pinned": [
+    {
+      "label": "Schedule a consultation",
+      "note": "A conversation about what has been going on and what might help.",
+      "url": "https://www.biobehavioralinstitute.com/contact?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "label": "Refer a patient",
+      "note": "For clinicians.",
+      "url": "https://www.biobehavioralinstitute.com/for-professionals?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "label": "All articles",
+      "url": "https://www.biobehavioralinstitute.com/blog?utm_source=instagram&utm_medium=social&utm_campaign=link_in_bio"
+    },
+    {
+      "label": "Call 516-487-7116",
+      "url": "tel:5164877116"
+    }
+  ]
+}
